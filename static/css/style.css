@@ -13,6 +13,7 @@ body {
   background: rgb(225, 255, 143);
   height: 800px;
   overflow: hidden;
+  margin-bottom: 94px;
 }
 .header__content {
   padding-left: calc((100% - 1200px) / 2);
@@ -94,6 +95,37 @@ body {
 .header__nav-bar-game ul li a {
   color: rgb(39, 32, 33);
   text-decoration: none;
+}
+
+.content {
+  padding-left: calc((100% - 1200px) / 2);
+  padding-right: calc((100% - 1200px) / 2);
+  margin-bottom: 46px;
+}
+.content__block-about {
+  margin-bottom: 72px;
+}
+.content__block-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding-bottom: 50px;
+}
+.content__title {
+  font-family: "Montserrat";
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 100%;
+  color: rgb(255, 255, 255);
+  margin-bottom: 24px;
+}
+.content__text {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #ffffff;
+  max-width: 788px;
 }
 
 .star {
@@ -215,4 +247,62 @@ body {
   height: 126px;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 81.4814 128.334' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='81.481445' height='128.333801' fill='none' customFrame='%23000000'%3e%3cpath id='Vector 4788' d='M56.8884 1.04858L0.729492 59.8133L80.7295 127.049L56.8884 1.04858Z' fill='rgb(188,236,48)' fill-rule='evenodd' /%3e%3cpath id='Vector 4788' d='M56.8884 1.04858L80.7295 127.049L0.729492 59.8133L56.8884 1.04858Z' fill-rule='evenodd' stroke='rgb(32,32,39)' stroke-linecap='round' stroke-width='1' /%3e%3c/svg%3e ");
   background-repeat: no-repeat;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  width: 378px;
+  align-self: flex-start;
+}
+.card__block-img {
+  position: relative;
+  width: 100%;
+  height: 314px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.card__block-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__block-img_game-1 {
+  background-color: fuchsia;
+}
+.card__block-img_game-2 {
+  background-color: chocolate;
+}
+.card__block-img_game-3 {
+  background-color: cornflowerblue;
+}
+.card__block-img_game-4 {
+  background-color: darkblue;
+}
+.card__block-img_game-5 {
+  background-color: green;
+}
+.card__block-content {
+  padding: 32px 32px 36px 32px;
+}
+.card__article {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgb(39, 26, 88);
+  display: flex;
+  justify-content: center;
+  max-width: 108px;
+  border-radius: 52.58px;
+  background-color: rgb(247, 247, 247);
+  margin-bottom: 26px;
+}
+.card__title h1 {
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+  color: rgb(64, 32, 39);
 }/*# sourceMappingURL=style.css.map */

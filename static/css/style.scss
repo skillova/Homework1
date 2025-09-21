@@ -14,6 +14,7 @@ body {
   background: rgba(225, 255, 143, 1);
   height: 800px;
   overflow: hidden;
+  margin-bottom: 94px;
   &__content {
     @include padding-adaptive(1200px);
     padding-top: 196px;
@@ -69,6 +70,32 @@ body {
         }
       }
     }
+  }
+}
+
+.content {
+  @include padding-adaptive(1200px);
+  margin-bottom: 46px;
+  &__block {
+    &-about {
+      margin-bottom: 72px;
+    }
+    &-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding-bottom: 50px;
+    }
+  }
+  &__title {
+    @include montserrat(64px, 700, 100%);
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 24px;
+  }
+  &__text {
+    @include montserrat(24px, 400, 32px);
+    color: #ffffff;
+    max-width: 788px;
   }
 }
 
@@ -182,3 +209,5 @@ body {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 81.4814 128.334' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='81.481445' height='128.333801' fill='none' customFrame='%23000000'%3e%3cpath id='Vector 4788' d='M56.8884 1.04858L0.729492 59.8133L80.7295 127.049L56.8884 1.04858Z' fill='rgb(188,236,48)' fill-rule='evenodd' /%3e%3cpath id='Vector 4788' d='M56.8884 1.04858L80.7295 127.049L0.729492 59.8133L56.8884 1.04858Z' fill-rule='evenodd' stroke='rgb(32,32,39)' stroke-linecap='round' stroke-width='1' /%3e%3c/svg%3e ");
   background-repeat: no-repeat;
 }
+
+@import "cards";
