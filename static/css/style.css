@@ -143,6 +143,7 @@ body {
   font-weight: 700;
   line-height: 100%;
   color: rgb(255, 255, 255);
+  display: block;
   margin-bottom: 24px;
 }
 .content__text {
@@ -335,13 +336,19 @@ body {
   line-height: 100%;
   color: rgb(64, 32, 39);
 }
+.card__title_big {
+  margin-bottom: 24px;
+}
 .card__title_big h1 {
   font-family: "Montserrat";
   font-size: 48px;
   font-weight: 700;
   line-height: 100%;
   color: rgb(32, 32, 39);
-  margin-bottom: 24px;
+}
+.card__text {
+  margin-bottom: 36px;
+  max-width: 440px;
 }
 .card__text h2 {
   font-family: "Montserrat";
@@ -349,8 +356,6 @@ body {
   font-weight: 400;
   line-height: 32px;
   color: rgb(32, 32, 39);
-  max-width: 440px;
-  margin-bottom: 36px;
 }
 .card__btn {
   font-family: "Montserrat";

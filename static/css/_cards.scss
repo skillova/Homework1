@@ -55,19 +55,19 @@
       color: rgba(64, 32, 39, 1);
     }
     &_big {
+      margin-bottom: 24px;
       & h1 {
         @include montserrat(48px, 700, 100%);
         color: rgba(32, 32, 39, 1);
-        margin-bottom: 24px;
       }
     }
   }
   &__text {
+    margin-bottom: 36px;
+    max-width: 440px;
     & h2 {
       @include montserrat(24px, 400, 32px);
       color: rgba(32, 32, 39, 1);
-      max-width: 440px;
-      margin-bottom: 36px;
     }
   }
   &__btn {

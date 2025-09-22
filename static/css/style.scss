@@ -114,6 +114,7 @@ body {
   &__title {
     @include montserrat(64px, 700, 100%);
     color: rgba(255, 255, 255, 1);
+    display: block;
     margin-bottom: 24px;
   }
   &__text {
