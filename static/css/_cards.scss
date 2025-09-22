@@ -1,8 +1,19 @@
 .card {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 30px;
-  width: 378px;
   align-self: flex-start;
+  &_row {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 500px;
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+  }
   &__block {
     &-img {
       position: relative;
@@ -10,32 +21,23 @@
       height: 314px;
       border-radius: 30px;
       overflow: hidden;
+      &_big {
+        width: 600px;
+        height: 500px;
+      }
       & img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      &_game-1 {
-        background-color: fuchsia;
-      }
-      &_game-2 {
-        background-color: chocolate;
-      }
-      &_game-3 {
-        background-color: cornflowerblue;
-      }
-      &_game-4 {
-        background-color: darkblue;
-      }
-      &_game-5 {
-        background-color: green;
+        object-fit: cover;
       }
     }
     &-content {
+      display: flex;
+      flex-direction: column;
       padding: 32px 32px 36px 32px;
+      &_big {
+        width: 600px;
+        padding: 48px;
+      }
     }
-
   }
   &__article {
     @include montserrat(16px, 500, 20px);
@@ -52,5 +54,23 @@
       @include montserrat(32px, 700, 100%);
       color: rgba(64, 32, 39, 1);
     }
+    &_big {
+      & h1 {
+        @include montserrat(48px, 700, 100%);
+        color: rgba(32, 32, 39, 1);
+        margin-bottom: 24px;
+      }
+    }
+  }
+  &__text {
+    & h2 {
+      @include montserrat(24px, 400, 32px);
+      color: rgba(32, 32, 39, 1);
+      max-width: 440px;
+      margin-bottom: 36px;
+    }
+  }
+  &__btn {
+    @include button();
   }
 }
