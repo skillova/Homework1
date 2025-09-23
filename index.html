@@ -9,16 +9,38 @@
 	<link rel="stylesheet" href="./static/css/style.css">
 </head>
 
-<body>
+<body class="body">
+	<div class="star-1"></div>
+	<div class="star-2"></div>
+	<div class="star-3"></div>
+	<div class="star-4"></div>
+	<div class="star-5"></div>
+	<div class="star-6"></div>
+	<div class="star-7"></div>
+	<div class="star-8"></div>
+	<div class="star-10"></div>
+	<div class="star-11"></div>
+	<div class="star-12"></div>
+	<div class="vector"></div>
+	<div class="vector-4780"></div>
+	<div class="vector-4781"></div>
+	<div class="vector-4782"></div>
+	<div class="vector-4791"></div>
+	<div class="vector-4788"></div>
 
 	<header class="header">
 		<div class="header__content">
-			<h1 class="header__title">Добро пожаловать <br>на мой сайт мини-игр</h1>
-			<h2 class="header__text">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай
-				<span class="header__text header__text_bold">«Поехали!»</span> и <span
-					class="header__text header__text_bold">приступай</span>.
-			</h2>
-			<button class="header__btn">Поехали!</button>
+			<div class="header__title">
+				<h1>Добро пожаловать <br>на мой сайт мини-игр</h1>
+			</div>
+			<div class="header__text">
+				<h2>Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай
+					<span>«Поехали!»</span> и <span>приступай</span>.
+				</h2>
+			</div>
+			<div class="header__btn">
+				<button onclick="location.href='#about-games'">Поехали!</button>
+			</div>
 		</div>
 		<div class="header__nav-bar-game">
 			<ul>
@@ -30,23 +52,13 @@
 				<li><a href="#">Генератор случайных цветов</a></li>
 			</ul>
 		</div>
-		<div class="star-2"></div>
-		<div class="star-3"></div>
-		<div class="star-4"></div>
-		<div class="star-5"></div>
-		<div class="vector"></div>
-		<div class="vector-4780"></div>
-		<div class="vector-4781"></div>
-		<div class="vector-4782"></div>
-		<div class="vector-4791"></div>
-		<div class="vector-4788"></div>
 	</header>
 
-	<section class="content">
+	<section class="content" id="about-games">
 		<div class="content__block-about">
-			<h1 class="content__title">Об играх</h1>
-			<h2 class="content__text">В моей коллекции представлено 6 игр на разные темы. <br>Игры несложные — в них
-				может поиграть каждый. <br>Все игры доступны для пользования.</h2>
+			<h2 class="content__title">Об играх</h2>
+			<p class="content__text">В моей коллекции представлено 6 игр на разные темы. <br>Игры несложные — в них
+				может поиграть каждый. <br>Все игры доступны для пользования.</p>
 		</div>
 		<div class="content__block-cards">
 			<article class="card">
@@ -59,7 +71,7 @@
 							<span>Игра № 1</span>
 						</div>
 						<div class="card__title">
-							<h1>Угадай число</h1>
+							<h2>Угадай число</h2>
 						</div>
 					</div>
 				</a>
@@ -74,7 +86,7 @@
 							<span>Игра № 2</span>
 						</div>
 						<div class="card__title">
-							<h1>Простая арифметика</h1>
+							<h2>Простая арифметика</h2>
 						</div>
 					</div>
 				</a>
@@ -89,7 +101,7 @@
 							<span>Игра № 3</span>
 						</div>
 						<div class="card__title">
-							<h1>Переверни текст</h1>
+							<h2>Переверни текст</h2>
 						</div>
 					</div>
 				</a>
@@ -104,7 +116,7 @@
 							<span>Игра № 4</span>
 						</div>
 						<div class="card__title">
-							<h1>Камень, ножницы, <br>бумага</h1>
+							<h2>Камень, ножницы, <br>бумага</h2>
 						</div>
 					</div>
 				</a>
@@ -119,7 +131,7 @@
 							<span>Игра № 5</span>
 						</div>
 						<div class="card__title">
-							<h1>Простая викторина</h1>
+							<h2>Простая викторина</h2>
 						</div>
 					</div>
 				</a>
@@ -134,7 +146,7 @@
 							<span>Игра № 6</span>
 						</div>
 						<div class="card__title">
-							<h1>Генератор случайных цветов</h1>
+							<h2>Генератор случайных цветов</h2>
 						</div>
 					</div>
 				</a>
@@ -144,7 +156,7 @@
 
 	<section class="content">
 		<div class="content__block-about">
-			<h1 class="content__title">Мини-игры</h1>
+			<h2 class="content__title">Мини-игры</h2>
 		</div>
 		<div class="content__block-cards">
 			<article class="card card_row" id="game-1">
@@ -153,10 +165,10 @@
 				</div>
 				<div class="card__block-content card__block-content_big">
 					<div class="card__title card__title_big">
-						<h1>Угадай число</h1>
+						<h2>Угадай число</h2>
 					</div>
 					<div class="card__text">
-						<h2>Попробуй угадать случайное число от 1 до 100.</h1>
+						<p>Попробуй угадать случайное число от 1 до 100.</p>
 					</div>
 					<button class="card__btn">Играть!</button>
 				</div>
@@ -167,24 +179,24 @@
 				</div>
 				<div class="card__block-content card__block-content_big">
 					<div class="card__title card__title_big">
-						<h1>Простая арифметика</h1>
+						<h2>Простая арифметика</h2>
 					</div>
 					<div class="card__text">
-						<h2>Попробуй решить простые арифметические задачи.</h1>
+						<p>Попробуй решить простые арифметические задачи.</p>
 					</div>
 					<button class="card__btn">Играть!</button>
 				</div>
 			</article>
-			<article class="card card_row"  id="game-3">
+			<article class="card card_row" id="game-3">
 				<div class="card__block-img card__block-img_big">
 					<img src=".//media/cards/game-3-big.svg" alt="">
 				</div>
 				<div class="card__block-content card__block-content_big">
 					<div class="card__title card__title_big">
-						<h1>Переверни текст</h1>
+						<h2>Переверни текст</h2>
 					</div>
 					<div class="card__text">
-						<h2>Попробуй ввести текст, который будет перевернут.</h1>
+						<p>Попробуй ввести текст, который будет перевернут.</p>
 					</div>
 					<button class="card__btn">Играть!</button>
 				</div>
@@ -195,10 +207,10 @@
 				</div>
 				<div class="card__block-content card__block-content_big">
 					<div class="card__title card__title_big">
-						<h1>Камень, ножницы, бумага</h1>
+						<h2>Камень, ножницы, бумага</h2>
 					</div>
 					<div class="card__text">
-						<h2>Сыграй в популярную игру против компьютера.</h1>
+						<p>Сыграй в популярную игру против компьютера.</p>
 					</div>
 					<button class="card__btn">Играть!</button>
 				</div>
@@ -209,10 +221,10 @@
 				</div>
 				<div class="card__block-content card__block-content_big">
 					<div class="card__title card__title_big">
-						<h1>Простая викторина</h1>
+						<h2>Простая викторина</h2>
 					</div>
 					<div class="card__text">
-						<h2>Отвечай на вопросы викторины с вариантами ответов.</h1>
+						<p>Отвечай на вопросы викторины с вариантами ответов.</p>
 					</div>
 					<button class="card__btn">Играть!</button>
 				</div>
@@ -223,10 +235,10 @@
 				</div>
 				<div class="card__block-content card__block-content_big">
 					<div class="card__title card__title_big">
-						<h1>Генератор случайных цветов</h1>
+						<h2>Генератор случайных цветов</h2>
 					</div>
 					<div class="card__text">
-						<h2>Игра, в которой при клике на кнопку фон страницы меняется на случайный.</h1>
+						<p>Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
 					</div>
 					<button class="card__btn">Играть!</button>
 				</div>
