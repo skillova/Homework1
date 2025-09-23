@@ -20,7 +20,14 @@ html {
   position: relative;
   background-color: rgb(32, 32, 39);
   overflow-x: hidden;
-  clip-path: inset(0); /* Обрезает всё за пределами body */
+}
+.body__background-vector-img {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .header {
