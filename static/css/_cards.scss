@@ -24,7 +24,7 @@
   &__block {
     &-img {
       display: flex;
-      justify-content: center;
+      justify-content: right;
       align-items: center;
       width: 100%;
       height: 314px;
@@ -34,13 +34,10 @@
         width: 50%;
         height: 100%;
       }
-    }
-    & img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
+      & img {
+        width: 100%;
+        height: auto;
+      }
     }
     &-content {
       display: flex;
@@ -48,7 +45,7 @@
       width: 100%;
       padding: 32px 32px 36px 32px;
       &_big {
-        width: calc($width-content / 2);
+        width: 50%;
         padding: 48px;
       }
     }

@@ -2,10 +2,11 @@
 $width-content: 1200px;
 
 a,
-h1 {
+h1,
+h2 {
   /* Сброс базовых стилей */
   all: unset; /* Сбрасывает все стили */
-  align-self: flex-start;
+  // align-self: flex-start;
 }
 
 html {
@@ -37,9 +38,10 @@ html {
   overflow: hidden;
   background: rgba(225, 255, 143, 1);
   height: 800px;
-  // &__content {
-
-  // }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
   &__title {
     max-width: 769px;
     padding-top: 196px;
@@ -119,15 +121,22 @@ html {
 
 .content {
   @include padding-adaptive($width-content);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 94px;
   &__block {
     &-about {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
       margin-bottom: 72px;
     }
     &-cards {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       justify-items: center;
+      width: 100%;
       gap: 32px;
     }
   }
@@ -256,7 +265,7 @@ html {
 }
 .vector {
   @include poz-vecktor-img(
-    $top: -333px,
+    $top: -270px,
     $left: 808px,
     $width: 950px,
     $height: 950px,
@@ -317,3 +326,4 @@ html {
 
 @import "cards";
 @import "tablet";
+@import "mobile";
