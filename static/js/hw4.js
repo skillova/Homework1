@@ -1,14 +1,15 @@
 // Задание 1
 // Выведите в консоль 2 раза слово «Привет».
-let num_1 = 0;
+let num_1 = 1;
 for (num_1; num_1 < 3; num_1++) {
   console.log("Привет");
 }
-num_1 = 1;
-while (num_1 < 2) {
-  console.log("Привет");
-  num_1++;
-}
+// Альтенративное решение 
+// num_1 = 1;
+// while (num_1 < 2) {
+//   console.log("Привет");
+//   num_1++;
+// }
 
 // Задание 2
 // Выведите в консоль цифры от 1 до 5.
@@ -16,11 +17,13 @@ let num_2 = 1;
 for (num_2; num_2 <= 5; num_2++) {
   console.log(num_2);
 }
-num_2 = 1;
-while (num_2 <= 5) {
-  console.log(num_2);
-  num_2++;
-}
+
+// Альтенративное решение
+// num_2 = 1;
+// while (num_2 <= 5) {
+//   console.log(num_2);
+//   num_2++;
+// }
 
 // Задание 3
 // Выведите в консоль числа от 7 до 22.
@@ -28,16 +31,17 @@ let num_3 = 7;
 for (num_3; num_3 <= 22; num_3++) {
   console.log(num_3);
 }
-num_3 = 7;
-while (num_3 <= 22) {
-  console.log(num_3);
-  num_3++;
-}
-num_3 = 7;
-do {
-  console.log(num_3);
-  num_3++;
-} while (num_3 <= 22);
+// Альтенративное решение
+// num_3 = 7;
+// while (num_3 <= 22) {
+//   console.log(num_3);
+//   num_3++;
+// }
+// num_3 = 7;
+// do {
+//   console.log(num_3);
+//   num_3++;
+// } while (num_3 <= 22);
 
 // Задание 4
 // Есть объект (назовем его obj), который содержит следующие пары ключ-значение:
