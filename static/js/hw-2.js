@@ -19,9 +19,10 @@ alert(jsCreatorName);
 
 // Задание 4
 // Создайте две переменные со значениями 10 и 2. С помощью метода alert() выведите на экран их сумму, разность, произведение и частное (результат деления).
-let b;
-a = 10;
-b = 2;
+let number1;
+let number2;
+number1 = 10;
+number2 = 2;
 alert("Сумма: " + (number1 + number2)); // 12
 alert("Разность: " + (number1 - number2)); // 8
 alert("Произведение: " + number1 * number2); // 20
