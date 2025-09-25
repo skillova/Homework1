@@ -87,11 +87,13 @@ html {
 .header__nav-bar-game {
   position: absolute;
   top: calc(100% - 90px);
+  left: 0;
   display: flex;
   align-items: center;
   height: 90px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   background: rgb(188, 236, 48);
   z-index: 30;
 }
@@ -584,7 +586,7 @@ html {
     font-family: "Montserrat";
     font-size: 40px;
     font-weight: 700;
-    line-height: 100%;
+    line-height: 49px;
   }
   .content {
     padding-left: 16px;
@@ -597,6 +599,7 @@ html {
   .content__block-cards {
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
+    gap: 24px;
   }
   .content__title {
     font-family: "Montserrat";
@@ -697,14 +700,14 @@ html {
     height: 55px;
   }
   .footer {
-    margin-top: 48px;
+    margin-top: 48.88px;
   }
   .footer__content {
     height: 100px;
   }
   .footer__text {
     font-family: "Montserrat";
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 100%;
   }

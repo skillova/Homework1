@@ -7,7 +7,7 @@
       padding-top: 147px;
       margin-bottom: 24px;
       & h1 {
-        @include montserrat(40px, 700, 100%);
+        @include montserrat(40px, 700, 49px);
       }
     }
   }
@@ -22,6 +22,7 @@
       &-cards {
         grid-template-columns: repeat(4, 1fr);
         width: 100%;
+        gap: 24px;
       }
     }
     &__title {
@@ -125,12 +126,12 @@
     }
   }
   .footer {
-    margin-top: 48px;
+    margin-top: 48.88px;
     &__content {
       height: 100px;
     }
     &__text {
-      @include montserrat(14px, 600, 100%);
+      @include montserrat(16px, 600, 100%);
     }
   }
   .star-2 {
