@@ -1,0 +1,46 @@
+@media (max-width: 1200px) {
+  $width-content: 788px;
+  .header {
+    @include padding-adaptive($width-content);
+  }
+  .content {
+    @include padding-adaptive($screen-width-px: $width-content);
+    &__block {
+      &-cards {
+        grid-template-columns: repeat(8, 1fr);
+        width: $width-content;
+      }
+    }
+  }
+  .card {
+    &_row {
+      width: $width-content;
+      height: 328px;
+    }
+    &__block {
+      &-content {
+        &_big {
+          padding: 29.04px 29.04px 32.67px 29.04px;
+        }
+      }
+    }
+    &__title {
+      &_big {
+        margin-bottom: 24px;
+        & h2 {
+          @include montserrat(32px, 700, 100%);
+        }
+      }
+    }
+    &__text {
+      margin-bottom: 36px;
+      max-width: 440px;
+      & p {
+        @include montserrat(16px, 400, 100%);
+      }
+    }
+    &__btn {
+      @include button();
+    }
+  }
+}
