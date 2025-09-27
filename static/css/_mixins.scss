@@ -37,13 +37,14 @@
   }
 }
 
-@mixin poz-vecktor-img($top, $left, $width, $height) {
+@mixin poz-vecktor-img($top, $left, $width, $height, $width-content) {
   position: absolute;
   display: block;
   top: $top;
-  left: calc((100% - 1200px) / 2 + $left);
+  left: calc((100% - #{$width-content}) / 2 + #{$left});
   width: $width;
   height: $height;
   background-repeat: no-repeat;
+  background-size: contain;
   z-index: 10;
 }
