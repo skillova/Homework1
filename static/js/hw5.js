@@ -3,7 +3,7 @@
 // Если мы передаем два одинаковых значения, например 6 и 6, то функция должна вернуть это значение (в данном случае — 6).
 function getMinNum(num_1, num_2) {
   res = num_1 < num_2 ? num_1 : num_2;
-  return `Меньшее: ${res}`;
+  return `${typeof res}`;
 }
 console.log(getMinNum(8, 4)); // 4
 console.log(getMinNum(4, 8)); // 4
@@ -89,28 +89,27 @@ console.log(multiplyNumbers("5", "0")); // 0
 // Если значение является числом, возвращает строку 'n в кубе равняется <получившееся значение>', где
 // n — введенное число, а <получившееся значение> — число, возведенное в куб.
 // Проверьте работу функции с числами от 0 до 10.
-function cubeNum(num) {
-  let inputNum;
-  let res;
+function cubeNum(inputNum) {
+    let res;
 
-  if (isNaN(num)) {
-    inputNum = Number(prompt("Введите число:"));
-  } else {
-    inputNum = num;
-  }
+    if (inputNum === undefined) {
+        inputNum = Number(prompt("Введите число:"));
+    }
 
-  if (isNaN(inputNum)) {
-    return "Переданный параметр не является числом";
-  }
-
-  res = inputNum ** 3;
-  return `${inputNum} в кубе равняется ${res}`;
+    if (isNaN(inputNum)) {
+        return "Переданный параметр не является числом";
+    } else {
+        res = inputNum ** 3;
+        return `${inputNum} в кубе равняется ${res}`;
+    }
 }
 
+// Цикл для вывода кубов чисел от 0 до 10
 for (let i = 0; i <= 10; i++) {
-  console.log(cubeNum(i));
+    console.log(cubeNum(i));
 }
 
+// Вызов функции без параметров для ручного ввода
 cubeNum();
 
 // Задание 7
@@ -119,24 +118,44 @@ cubeNum();
 // Метод getArea, который возвращает площадь круга, вычисляемую через радиус.
 // Метод getPerimeter, который возвращает периметр окружности.
 
-function getArea() {
-  // Метод для вычисления площади круга
-  return Math.PI * this.radius ** 2;
-}
-function getPerimeter() {
-  // Метод для вычисления периметра (длины окружности)
-  return 2 * Math.PI * this.radius;
-}
+// function getArea() {
+//   // Метод для вычисления площади круга
+//   return Math.PI * this.radius ** 2;
+// }
+// function getPerimeter() {
+//   // Метод для вычисления периметра (длины окружности)
+//   return 2 * Math.PI * this.radius;
+// }
+
+// const circle1 = {
+//   radius: 5,
+//   area: getArea,
+//   perimeter: getPerimeter,
+// };
+// const circle2 = {
+//   radius: 10,
+//   area: getArea,
+//   perimeter: getPerimeter,
+// };
 
 const circle1 = {
   radius: 5,
-  area: getArea,
-  perimeter: getPerimeter,
+  area() {
+    return Math.PI * this.radius ** 2
+  },
+  perimeter() {
+    return 2 * Math.PI * this.radius
+  },
 };
+
 const circle2 = {
   radius: 10,
-  area: getArea,
-  perimeter: getPerimeter,
+  area() {
+    return Math.PI * this.radius ** 2
+  },
+  perimeter() {
+    return 2 * Math.PI * this.radius
+  },
 };
 
 console.log(`площади круга-1: ${circle1.area()}`);
