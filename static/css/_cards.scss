@@ -7,7 +7,12 @@
   border-radius: 30px;
   align-self: flex-start;
   z-index: 20;
-  // border: 1px solid #3910f0;
+  &_hover-zoom {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
   & a {
     @include cursor;
   }
