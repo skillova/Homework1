@@ -3,7 +3,7 @@
 // Если мы передаем два одинаковых значения, например 6 и 6, то функция должна вернуть это значение (в данном случае — 6).
 function getMinNum(num_1, num_2) {
   res = num_1 < num_2 ? num_1 : num_2;
-  return `${typeof res}`;
+  return `${res}`;
 }
 console.log(getMinNum(8, 4)); // 4
 console.log(getMinNum(4, 8)); // 4
@@ -89,28 +89,31 @@ console.log(multiplyNumbers("5", "0")); // 0
 // Если значение является числом, возвращает строку 'n в кубе равняется <получившееся значение>', где
 // n — введенное число, а <получившееся значение> — число, возведенное в куб.
 // Проверьте работу функции с числами от 0 до 10.
-function cubeNum(inputNum) {
-    let res;
+function cubeNum() {
+  let inputNum = prompt("Введите число:");
+  let res;
 
-    if (inputNum === undefined) {
-        inputNum = Number(prompt("Введите число:"));
-    }
-
-    if (isNaN(inputNum)) {
-        return "Переданный параметр не является числом";
-    } else {
-        res = inputNum ** 3;
-        return `${inputNum} в кубе равняется ${res}`;
-    }
+  if (!isNaN(inputNum) && inputNum !== null && inputNum.trim() !== "") {
+    res = Number(inputNum) ** 3;
+    return `${inputNum} в кубе равняется ${res}`;
+  } else {
+    return "Переданный параметр не является числом";
+  }
 }
 
-// Цикл для вывода кубов чисел от 0 до 10
-for (let i = 0; i <= 10; i++) {
-    console.log(cubeNum(i));
-}
-
-// Вызов функции без параметров для ручного ввода
-cubeNum();
+// answers = {
+//   0: "0 в кубе равняется 0",
+//   1: "1 в кубе равняется 1",
+//   2: "2 в кубе равняется 8",
+//   3: "3 в кубе равняется 27",
+//   4: "4 в кубе равняется 64",
+//   5: "5 в кубе равняется 125",
+//   6: "6 в кубе равняется 216",
+//   7: "7 в кубе равняется 343",
+//   8: "8 в кубе равняется 512",
+//   9: "9 в кубе равняется 729",
+//   10: '10 в кубе равняется 1000'
+// };
 
 // Задание 7
 // Создайте два объекта, circle1 и circle2, каждый из которых имеет свойство radius.
@@ -141,20 +144,20 @@ cubeNum();
 const circle1 = {
   radius: 5,
   area() {
-    return Math.PI * this.radius ** 2
+    return Math.PI * this.radius ** 2;
   },
   perimeter() {
-    return 2 * Math.PI * this.radius
+    return 2 * Math.PI * this.radius;
   },
 };
 
 const circle2 = {
   radius: 10,
   area() {
-    return Math.PI * this.radius ** 2
+    return Math.PI * this.radius ** 2;
   },
   perimeter() {
-    return 2 * Math.PI * this.radius
+    return 2 * Math.PI * this.radius;
   },
 };
 
