@@ -7,6 +7,11 @@ function getRandomFromArr(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+// Функция принимает строку и возвращает перевернутую строку
+function getInvertedText(str) {
+  return str.split("").reverse().join("");
+}
+
 document
   .getElementById("gameSecretNumber")
   .addEventListener("click", function (gameSecretNumber) {
@@ -114,10 +119,30 @@ document
       if (userInput == null) {
         alert("Попробуем в другой раз!");
         break;
-      } else if (!isNaN(userInput) && userInput == ~~answer && userInput !== "") {
+      } else if (
+        !isNaN(userInput) &&
+        userInput == ~~answer &&
+        userInput !== ""
+      ) {
         userInput = alert(`Верно, правильный ответ ${~~answer}`);
       } else {
         userInput = alert(`Неверно, правильный ответ ${~~answer}`);
+      }
+    }
+  });
+
+document
+  .getElementById("textInverted")
+  .addEventListener("click", function (textInverted) {
+    let inputTextUser;
+
+    while (true) {
+      inputTextUser = prompt("Введите текст...");
+      if (inputTextUser == null) {
+        alert("Попробуем в другой раз!");
+        break;
+      } else {
+        alert(getInvertedText(inputTextUser));
       }
     }
   });
