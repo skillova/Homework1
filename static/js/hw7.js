@@ -44,7 +44,7 @@ console.log(
 
 // Задание 5
 // Создать функцию, которая выводит в консоль случайное число от 1 до 10.
-function randomNum(min=1, max=10) {
+function randomNum(min = 1, max = 10) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 console.log(`${randomNum()}`);
@@ -53,7 +53,7 @@ console.log(`${randomNum()}`);
 // Написать функцию, которая принимает целое число и возвращает массив случайных чисел от 0 до этого числа.
 // Длина массива должна быть в два раза меньше переданного числа.
 function arrRandom(num) {
-  return new Array(Math.floor(num / 2)).fill().map(() => randomNum(0, num));
+  return new Array(Math.floor(num / 2)).fill().map(() => randomNum(min = 1, max = num));
 }
 console.log(`${arrRandom(20)}`);
 
@@ -64,27 +64,43 @@ console.log(`${randomNum(1, 100)}`);
 // Задание 8
 // Вывести в консоль текущую дату.
 let currentDate = new Date();
-console.log(`${currentDate}`)
+console.log(`${currentDate}`);
 
 // Задание 9
-// Создать переменную currentDate, хранящую текущую дату. 
+// Создать переменную currentDate, хранящую текущую дату.
 // Вывести дату, которая наступит через 73 дня после текущей.
-let futureDate = new Date(new Date().setDate(new Date().getDate() + 73)).toLocaleDateString();
-console.log(`${futureDate}`)
+let futureDate = new Date(
+  new Date().setDate(new Date().getDate() + 73)
+).toLocaleDateString();
+console.log(`${futureDate}`);
 
 // Задание 10
 // Написать функцию, которая принимает дату и возвращает ее в формате:
 // Дата: [число] [месяц на русском] [год] — это [день недели на русском].
 // Время: [часы]:[минуты]:[секунды]
 const monthsOfYear = [
-  'января', 'февраля', 'марта', 'апреля', 
-  'мая', 'июня', 'июля', 'августа', 
-  'сентября', 'октября', 'ноября', 'декабря'
+  "января",
+  "февраля",
+  "марта",
+  "апреля",
+  "мая",
+  "июня",
+  "июля",
+  "августа",
+  "сентября",
+  "октября",
+  "ноября",
+  "декабря",
 ];
 
 const daysOfWeek = [
-   'воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 
-  'пятница', 'суббота'
+  "воскресенье",
+  "понедельник",
+  "вторник",
+  "среда",
+  "четверг",
+  "пятница",
+  "суббота",
 ];
 
 function formatDate(date) {
@@ -93,18 +109,16 @@ function formatDate(date) {
   const month = monthsOfYear[date.getMonth()];
   const year = date.getFullYear();
   const dayOfWeek = daysOfWeek[date.getDay()];
-  
-  const hours = String(date.getHours()).padStart(2, '0');
-  const minutes = String(date.getMinutes()).padStart(2, '0');
-  const seconds = String(date.getSeconds()).padStart(2, '0');
-  
+
+  const hours = String(date.getHours()).padStart(2, "0");
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+  const seconds = String(date.getSeconds()).padStart(2, "0");
+
   // Форматируем строку
   const dateString = `Дата: ${day} ${month} ${year} — это ${dayOfWeek}`;
   const timeString = `Время: ${hours}:${minutes}:${seconds}`;
-  
-  return `${dateString}\n${timeString}`};
 
+  return `${dateString}\n${timeString}`;
+}
 
-  console.log(formatDate(new Date))
-
-
+console.log(formatDate(new Date()));
