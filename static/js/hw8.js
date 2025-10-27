@@ -23,9 +23,12 @@ console.log(people1.sort((a, b) => a.age - b.age));
 // Чтобы из функции map сделать filter, нужно, в зависимости от результата вызова ruleFunction,
 // принимать решение о том, добавлять в результирующий массив очередной элемент или нет.
 
-function ruleFunction(person) {
-  // писать код тут
-  return person.gender === "male";
+function isPositive(number) {
+ return number > 0;
+}
+
+function isMale(person) {
+ return person.gender === 'male';
 }
 
 function filter(arr, ruleFunction) {
@@ -38,6 +41,8 @@ function filter(arr, ruleFunction) {
   return result;
 }
 
+console.log(filter([3, -4, 1, 9], isPositive));
+
 const people = [
   { name: "Глеб", gender: "male" },
   { name: "Анна", gender: "female" },
@@ -45,7 +50,7 @@ const people = [
   { name: "Оксана", gender: "female" },
 ];
 
-console.log(filter(people, ruleFunction));
+console.log(filter(people, isMale));
 
 // Задание 3
 // Напишите программу, которая на протяжении 30 секунд каждые 3 секунды будет выводить в консоль текущую дату.
