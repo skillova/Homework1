@@ -167,32 +167,34 @@ document.getElementById("TsuEFa").addEventListener("click", function () {
 
   const list = ITEMS_LIST.map((item, index) => `${index + 1}. ${item}`).join("\n");
 
-  const inputTextUser = prompt(`Выберите вариант:\n\n${list}\n\nВведите номер вашего выбора`);
+  while (true) {
+    const inputTextUser = prompt(`Выберите вариант:\n\n${list}\n\nВведите номер вашего выбора`);
 
-  if (inputTextUser === null) {
-    alert("Попробуем в другой раз!");
-    return;
-  }
+    if (inputTextUser === null) {
+      alert("Попробуем в другой раз!");
+      return;
+    }
 
-  const userChoice = Number(inputTextUser);
+    const userChoice = Number(inputTextUser);
 
-  if (isNaN(userChoice) || userChoice < 1 || userChoice > ITEMS_LIST.length) {
-    alert("Неверный ввод! Пожалуйста, выберите число от 1 до " + ITEMS_LIST.length);
-    return;
-  }
+    if (isNaN(userChoice) || userChoice < 1 || userChoice > ITEMS_LIST.length) {
+      alert("Неверный ввод! Пожалуйста, выберите число от 1 до " + ITEMS_LIST.length);
+      return;
+    }
 
-  const user = ITEMS_LIST[userChoice - 1];
-  const ai = getRandomFromArr(ITEMS_LIST);
+    const user = ITEMS_LIST[userChoice - 1];
+    const ai = getRandomFromArr(ITEMS_LIST);
 
-  if (user === ai) {
-    alert(`Ничья!\nВы выбрали: ${user}\nКомпьютер выбрал: ${ai}`);
-  } else if (
-    (user === "камень" && ai === "ножницы") ||
-    (user === "ножницы" && ai === "бумага") ||
-    (user === "бумага" && ai === "камень")
-  ) {
-    alert(`Победа!\nВы выбрали: ${user}\nКомпьютер выбрал: ${ai}`);
-  } else {
-    alert(`Поражение!\nВы выбрали: ${user}\nКомпьютер выбрал: ${ai}`);
+    if (user === ai) {
+      alert(`Ничья!\nВы выбрали: ${user}\nКомпьютер выбрал: ${ai}`);
+    } else if (
+      (user === "камень" && ai === "ножницы") ||
+      (user === "ножницы" && ai === "бумага") ||
+      (user === "бумага" && ai === "камень")
+    ) {
+      alert(`Победа!\nВы выбрали: ${user}\nКомпьютер выбрал: ${ai}`);
+    } else {
+      alert(`Поражение!\nВы выбрали: ${user}\nКомпьютер выбрал: ${ai}`);
+    }
   }
 });
