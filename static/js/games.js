@@ -7,6 +7,11 @@ function getRandomFromArr(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+// Функция принимает строку и возвращает перевернутую строку
+function getInvertedText(str) {
+  return str.split("").reverse().join("");
+}
+
 document
   .getElementById("gameSecretNumber")
   .addEventListener("click", function (gameSecretNumber) {
@@ -114,10 +119,65 @@ document
       if (userInput == null) {
         alert("Попробуем в другой раз!");
         break;
-      } else if (!isNaN(userInput) && userInput == ~~answer && userInput !== "") {
+      } else if (
+        !isNaN(userInput) &&
+        userInput == ~~answer &&
+        userInput !== ""
+      ) {
         userInput = alert(`Верно, правильный ответ ${~~answer}`);
       } else {
         userInput = alert(`Неверно, правильный ответ ${~~answer}`);
       }
     }
+  });
+
+document
+  .getElementById("textInverted")
+  .addEventListener("click", function (textInverted) {
+    let inputTextUser;
+
+    while (true) {
+      inputTextUser = prompt("Введите текст...");
+      if (inputTextUser == null) {
+        alert("Попробуем в другой раз!");
+        break;
+      } else {
+        alert(getInvertedText(inputTextUser));
+      }
+    }
+  });
+
+document
+  .getElementById("simpleQuiz")
+  .addEventListener("click", function (simpleQuiz) {
+    let answerCount = 0;
+    const quiz = [
+      {
+        question: "Какой цвет небо?",
+        options: ["1. Красный", "2. Синий", "3. Зеленый"],
+        correctAnswer: 2, // номер правильного ответа
+      },
+      {
+        question: "Сколько дней в неделе?",
+        options: ["1. Шесть", "2. Семь", "3. Восемь"],
+        correctAnswer: 2,
+      },
+      {
+        question: "Сколько у человека пальцев на одной руке?",
+        options: ["1. Четыре", "2. Пять", "3. Шесть"],
+        correctAnswer: 2,
+      },
+    ];
+
+    for (_ of quiz) {
+      question = _.question;
+      options = _.options.map(options => `\n${options}`);
+      correctAnswer = _.correctAnswer;
+      answer = Number(prompt(`Вопрос: ${question}\n\Выберите ответ: ${options}`));
+      if (answer === correctAnswer) {
+        answerCount++;
+      }
+    }
+    
+    alert(`Привильных ответов: ${answerCount} из ${quiz.length}`);
   });
